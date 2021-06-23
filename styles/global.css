@@ -26,6 +26,8 @@ html {
 
 body {
     height: 100vh;
+    display: flex;
+    
     background-color: var(--background); /* Usando a variavel */
 }
 

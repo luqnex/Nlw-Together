@@ -1,6 +1,6 @@
 .content {
     display: grid;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 60% 40%;
     grid-template-rows: 11.4rem 1fr;
 
     grid-template-areas: 
@@ -15,7 +15,8 @@ header {
 #bg {
     grid-area: left;
 
-    background: url('/Imagens/ilustracao.svg') no-repeat top/contain;
+    background: url('/Imagens/home-bg.svg') no-repeat top/contain;
+    background-position: -8rem;
 }
 
 main {
@@ -25,13 +26,13 @@ main {
 }
 
 main .container {
-    width: min(36.3rem 100%);
+    width: min(30.3rem, 100%);
 }
 
 main h2 {
     font-family: 'Poppins', sans-serif;
     color: var(--black);
-    font-size: clamp(20px, 5vw, 2.8rem);
+    font-size: clamp(20px, 5vw, 2.4rem);
     margin-bottom: 2.4rem;
     font-weight: 700;
 }
@@ -44,4 +45,51 @@ input {
 input, button, .button {
     width: 100%;
     margin-bottom: 1.8rem;
+}
+
+/* Separator line */
+
+.separator {
+    display: flex;
+    align-items: center;
+    margin: 4rem 0;
+}
+
+.separator div:nth-child(2) {
+    color: var(--gray-blue);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    padding: 0 1.35rem;
+    line-height: 0;
+}
+
+.separator div:nth-child(1),
+.separator div:nth-child(3) {
+    background-color: var(--gray-blue);
+    width: 100%;
+    height: 1px;
+}
+
+/*** Create balls ***/
+
+.ball {
+    width: 21.2rem;
+    height: 21.2rem;
+    background: var(--blue);
+    clip-path: circle(); /* Cria formas geometricas*/
+    opacity: .1;
+
+    position: fixed;
+}
+
+.ball.top {
+    width: 63.3rem;
+    height: 63.3rem;
+    top: -42rem;
+    right: -42rem;
+}
+
+.ball.bottom {
+    bottom: -15rem;
+    left: 100rem;
 }
